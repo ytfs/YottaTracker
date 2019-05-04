@@ -69,7 +69,7 @@ oc/current/cookbook/configuration/web_server_configuration.html
 
 ## 配置环境
 
-* 下载Yotta Tracker 代码，执行 git clone [https://github.com/sdumaoziqi/YottaTracker.git](https://github.com/sdumaoziqi/YottaTracker.git)
+* 下载Yotta Tracker 代码，执行 git clone [https://github.com/ytfs/YottaTracker.git](https://github.com/ytfs/YottaTracker.git)
 
 * 安装nodejs, npm, angular
   * apt-get install nodejs
