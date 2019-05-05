@@ -94,15 +94,11 @@ oc/current/cookbook/configuration/web_server_configuration.html
 
 * 注意事项
   * 为了支持Yotta Tracker发起的跨域请求，提供服务的节点需要配置--access-control-allow-origin '*'
-  * 为了使用当前Yotta Tracker的完整功能，提供服务的节点需要enable以下plugin（可能不完整，部分enable可能有风险）
+  * 为了使用当前Yotta Tracker的完整功能，提供服务的节点需要enable以下plugin（可能不完整）
   ```
   --plugin eosio::http_plugin
   --plugin eosio::chain_api_plugin
-  --plugin eosio::producer_plugin
   --plugin eosio::history_plugin
   --plugin eosio::history_api_plugin
-  --plugin eosio::producer_api_plugin
-  --plugin eosio::net_plugin
-  --plugin eosio::net_api_plugin
   ```
 
