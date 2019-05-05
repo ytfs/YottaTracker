@@ -93,12 +93,10 @@ oc/current/cookbook/configuration/web_server_configuration.html
   * 在浏览器中输入上述网址就可以看到页面了
 
 * 注意事项
-  * 为了支持Yotta Tracker发起的跨域请求，提供服务的节点需要配置--access-control-allow-origin '*'
+  * 为了支持Yotta Tracker发起的跨域请求，提供服务的节点需要配置--access-control-allow-origin '*'  --access-control-allow-headers '*'
   * 为了使用当前Yotta Tracker的完整功能，提供服务的节点需要enable以下plugin（可能不完整）
   ```
-  --plugin eosio::http_plugin
   --plugin eosio::chain_api_plugin
-  --plugin eosio::history_plugin
   --plugin eosio::history_api_plugin
   ```
 
