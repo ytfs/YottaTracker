@@ -39,7 +39,7 @@ export class AppService {
     this.recentBlocks$ = this.latestBlock$.pipe(
       switchMap((block: any) => {
         const blockNumber: number = block.block_num;
-        const blockNumbers: number[] = [blockNumber - 1, blockNumber - 2, blockNumber - 3, blockNumber - 4];
+        const blockNumbers: number[] = [blockNumber - 1, blockNumber - 2, blockNumber - 3, blockNumber - 4, blockNumber - 5, blockNumber - 6, blockNumber - 7, blockNumber - 8, blockNumber - 9];
         const blockNumbers$: Observable<any>[] = blockNumbers.map(blockNum => this.eosService.getDeferBlock(blockNum).pipe(catchError(() => of(null))));
         return forkJoin(blockNumbers$).pipe(
           map((blocks) => [block, ...blocks].filter(block => block !== null))
