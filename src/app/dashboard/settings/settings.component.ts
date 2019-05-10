@@ -62,8 +62,5 @@ export const LANGUAGES = [
 ];
 
 export const APIS = [
-  { name: 'EOS Dublin', endpoint: 'https://api1.eosdublin.io' },
-  { name: 'EOS New York', endpoint: 'http://api.eosnewyork.io' },
-  { name: 'Greymass', endpoint: 'https://eos.greymass.com' },
-  { name: 'Cypherglass', endpoint: 'http://api.cypherglass.com' }
+  { name: 'YTA testnet', endpoint: 'http://152.136.11.202:8888' }
 ]
