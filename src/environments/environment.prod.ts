@@ -5,5 +5,5 @@ export const environment = {
   appName: 'Yotta Tracker',
   logoUrl: '/assets/logo.png',
   blockchainUrl: 'http://152.136.11.202:8888',
-  chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906'
+  chainId: '50e6ce0fc7f882e88d0dd6fba6888b671d04140cb940d2edbbe5923cf7ab1d09'
 };
