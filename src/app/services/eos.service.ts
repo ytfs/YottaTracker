@@ -85,7 +85,7 @@ export class EosService {
   }
 
   getAccountTokens(name: string): Observable<Result<any[]>> {
-    const allTokens$: Observable<any[]> = this.http.get<any[]>(`https://raw.githubusercontent.com/sdumaoziqi/YottaTokens/master/tokens.json`);
+    const allTokens$: Observable<any[]> = this.http.get<any[]>(`https://raw.githubusercontent.com/ytfs/YottaTokens/master/tokens.json`);
     const getCurrencyBalance = function (token: any, account: string): Observable<any> {
       return from(this.eos.getCurrencyBalance(token.account, account, token.symbol)).pipe(
         map((balance: string[]) => ({
