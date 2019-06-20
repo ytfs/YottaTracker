@@ -104,3 +104,43 @@ oc/current/cookbook/configuration/web_server_configuration.html
   --plugin eosio::history_api_plugin
   ```
 
+## 编译生成可部署文件
+```
+ng build --prod
+```
+生成`dist/`
+
+## apache部署(ubuntu为例)
+
+sudo apt-get install apache2 
+
+apache2的配置文件在/etc/apache2 
+
+将`dist/`移动到`/var/www/` 重命名为`html/`
+
+在`html/`下新建文件`.htaccess`写入以下内容
+
+```
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+
+## 增加服务节点
+
+在`YottaTracker/src/app/dashboard/settings/settings.component.ts`修改
+
+```
+export const APIS = [
+  { name: 'YTA testnet', endpoint: 'http://152.136.11.202:8888' }
+]
+```
+`name`是名称, `endpoint`是主网节点ip与端口
+
+注意修改了以后要重新编译部署
+
