@@ -9,6 +9,6 @@ export const environment = {
   votingUrl: 'https://eosportal.io',
   appName: 'Yotta Tracker',
   logoUrl: '/assets/logo.png',
-  blockchainUrl: 'http://152.136.11.202:8888',
-  chainId: '50e6ce0fc7f882e88d0dd6fba6888b671d04140cb940d2edbbe5923cf7ab1d09'
+  blockchainUrl: 'http://35.176.59.89:8888',
+  chainId: 'c4e16064e1040b47f39ac08a1b1bee191458ba7b73dae7995170559237d07cc9'
 };
