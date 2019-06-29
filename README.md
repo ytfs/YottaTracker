@@ -137,10 +137,18 @@ apache2的配置文件在/etc/apache2
 
 ```
 export const APIS = [
-  { name: 'YTA testnet', endpoint: 'http://152.136.11.202:8888' }
+  { name: '星际特工', endpoint: 'http://35.176.59.89:8888' },
+  { name: '四川微存', endpoint: 'http://129.28.188.167:8888' },
+  { name: '北京工信融创云', endpoint: 'http://139.155.106.14:8888' },
+  { name: '中创思维', endpoint: 'http://47.91.114.170:8888' }
 ]
 ```
+
 `name`是名称, `endpoint`是主网节点ip与端口
+
+如果更改了APIS中的第一个API，同步修改`environment.prod.ts`与`environment.ts`中的`blockchainUrl`，保持其与APIS中第一个相同。
+
+如果换链了，`environment.prod.ts`与`environment.ts`中的`chainId` 与新链一致。
 
 注意修改了以后要重新编译部署
 
